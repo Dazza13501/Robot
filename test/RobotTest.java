@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RobotTest {
 
-    Robot buddy = new Robot("buddy");
+    Robot buddy = new Robot("buddy", 10);
 
     @Test
     public void getName(){
@@ -15,7 +15,14 @@ class RobotTest {
     }
 
     @Test
+    public void getAge(){
+        assertEquals(10, buddy.getAge());
+
+    }
+
+    @Test
     public void isNotWorking() {
+
         assertFalse(buddy.isWorking());
     }
 
@@ -43,7 +50,7 @@ class RobotTest {
     @Test
     public void testName_Fail() {
         assertThrows(IllegalArgumentException.class, () -> {
-            Robot chuck = new Robot("");
+            Robot chuck = new Robot("", 10);
         });
     }
 
