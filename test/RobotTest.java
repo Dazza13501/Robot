@@ -28,13 +28,13 @@ class RobotTest {
 
     @Test
     public void isWorking() {
-        buddy.talktoRobot();
+        buddy.talkToRobot();
         assertTrue(buddy.isWorking());
     }
 
     @Test
     public void getWorkingMsg() {
-        buddy.talktoRobot(); 
+        buddy.talkToRobot();
         assertEquals("I am in working mode",buddy.getWorkingMsg()); 
     }
 
